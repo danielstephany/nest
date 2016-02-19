@@ -1,1 +1,4 @@
-app.js
+
+$("#toggle").click(function() {
+	$("body").toggleClass("open");
+});

@@ -1,17 +1,28 @@
 /* mobile Nav *********************************
 ***********************************************/
+
 .mobile-nav {
 	background-color: #ecf2f3;
 	display: block;
 	position: fixed;
 	top: 0;
 	left: 0;
-	right: 0;
 	height: 100vh;
+	width: 85%;
 	margin: 0 15% 0 0;
+	opacity: 0;
+	z-index: -1;
 	overflow-x: scroll;
+	transition: opacity .3s linear, z-index .0s linear;
+	@media (min-width: 600px) {
+		margin: 0 53% 0 0;
+		width: 47%;
+	}
+	@media(min-width: 950px) {
+		display: none;
+	}
 	a {
-
+		font-family: Akkurat-Light, helvetica;
 		font-size: 0.85em;
 		font-weight: 100;
 		color: #7c7c7c;
@@ -81,7 +92,10 @@
 	}	
 }
 
-
+.open .mobile-nav {
+	opacity: 1;
+	z-index: 11;
+}
 
 
 

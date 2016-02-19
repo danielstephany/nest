@@ -12,18 +12,41 @@ html {
   box-sizing: inherit;
   }
 
+  @font-face {
+    font-family: Akkurat-Light;
+    src: url(../fonts/Akkurat-Light-Regular.otf);
+}
+
 body {
+  background-color: #e8eaed;
+  position: relative;
   padding: 0;
   margin: 0;
   width: 100%;
+  overflow: hidden;
 }
 
 a {
   text-decoration: none;
 }
 
+p,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: Akkurat-Light, helvetica;
+}
+
 ul {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.clear:after {
+  content: "";
+  display: table;
+  clear: both;
 }
