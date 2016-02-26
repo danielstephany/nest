@@ -11,10 +11,11 @@
 	text-align: center;
 	@media(min-width: 600px) {
 		height: 85px;
+		border-bottom: 15px solid #fff;
 	}
 	@media(min-width: 950px) {
 		padding: 15px;
-		height: 127px;
+		height: 144px;
 	}
 	.logo {		
 		img {

@@ -1,0 +1,97 @@
+.nestAware {
+	display: block;
+	padding: 5px;
+	margin: 0;
+	height: 230px;
+	background: url(../img/bg.jpeg) center center;
+	background-size: cover;
+	text-align: center;
+	@media (min-width: 600px) {
+		height: 160px;
+		text-align: left;
+	}
+}
+
+.cloud-box {
+	display: inline-block;
+	background: url(../img/nestware.png) center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	min-width: 241px;
+	height: 81px;
+	margin: 10px;
+	padding: 0;
+	text-align: right;
+	p {
+		color: $text-blue;
+		font-size: 40px;
+		letter-spacing: -1px;
+		margin: 13px 18px 0 0;
+	}
+	a {
+		color: $text-blue;
+		display: inline-block;
+	}
+}
+
+.nestAware-wrap {
+		display: block;
+		width: 75%;
+		margin: 0 auto;
+		padding: 10px 0 0;
+		@media (min-width: 600px) {
+			padding: 20px 0 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: flex-start;
+		}
+		a {
+			display: inline-block;
+		}
+	}
+
+.nestAware-content {
+	margin: 0 10px;
+	padding: 0;
+	@media (min-width: 600px) {
+		margin: 0 20px;
+	}
+	p {
+		color: #7b858e;
+		line-height: 20px;
+		margin: 5px 0;
+	}
+	p:first-of-type {
+		color: $text-blue;
+		margin: 0;
+		@media (min-width: 950px) {
+			font-size: 22px;
+			line-height: 24px;
+		}
+		span {
+			display: block;
+			position: relative;
+			width: 90px;
+			margin: 0 auto;
+			font-size: 16px;
+			@media (min-width: 600px) {
+				display: inline-block;
+				width: 80px;
+			}
+			&:hover::after {
+				right: -3px;
+			}
+			&:after {
+				content: "\003E";
+				margin: 0;
+				padding: 0;
+				position: absolute;
+				right: 0px;
+				top: 0px;
+				font-size: 17px;
+				transition: right 0.2s linear;
+			}
+		}
+	}
+}

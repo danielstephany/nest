@@ -1,6 +1,7 @@
 html {
 	margin: 0;
 	padding: 0;
+  height: 100%;
 	width: 100%;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -19,11 +20,22 @@ html {
 
 body {
   background-color: #e8eaed;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.bodywrap {
+  background-color: #e8eaed;
   position: relative;
   padding: 0;
   margin: 0;
   width: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
+}
+
+img {
+  width: 100%;
 }
 
 a {

@@ -446,6 +446,7 @@ table {
 html {
   margin: 0;
   padding: 0;
+  height: 100%;
   width: 100%;
   box-sizing: border-box; }
 
@@ -458,11 +459,20 @@ html {
 
 body {
   background-color: #e8eaed;
+  padding: 0;
+  margin: 0;
+  width: 100%; }
+
+.bodywrap {
+  background-color: #e8eaed;
   position: relative;
   padding: 0;
   margin: 0;
   width: 100%;
-  overflow: hidden; }
+  overflow-x: hidden; }
+
+img {
+  width: 100%; }
 
 a {
   text-decoration: none; }
@@ -489,7 +499,6 @@ ul {
   background-color: #fff;
   width: 100%;
   max-width: 960px;
-  min-height: 100vh;
   padding: 0;
   margin: 0 auto;
   transition: all .2s linear; }
@@ -498,13 +507,23 @@ ul {
       padding: 0 15px 15px 15px; } }
 
 .open .wrapper {
-  -webkit-transform: translateX(85%);
-          transform: translateX(85%);
+  -webkit-transform: translate3d(83%, 0, 0);
+          transform: translate3d(83%, 0, 0);
   transition: all .15s linear; }
   @media (min-width: 600px) {
     .open .wrapper {
-      -webkit-transform: translateX(47%);
-              transform: translateX(47%); } }
+      -webkit-transform: translate3d(47%, 0, 0);
+              transform: translate3d(47%, 0, 0); } }
+
+.content-sections {
+  display: block;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  border-bottom: 6px solid #fff; }
+  @media (min-width: 600px) {
+    .content-sections {
+      border-bottom: 15px solid #fff; } }
 
 /* mobile Nav *********************************
 ***********************************************/
@@ -514,12 +533,13 @@ ul {
   position: fixed;
   top: 0;
   left: 0;
+  right: 0;
   height: 100vh;
   width: 85%;
   margin: 0 15% 0 0;
   opacity: 0;
   z-index: -1;
-  overflow-x: scroll;
+  overflow-y: scroll;
   transition: opacity .3s linear, z-index .0s linear; }
   @media (min-width: 600px) {
     .mobile-nav {
@@ -590,7 +610,7 @@ ul {
 
 .open .mobile-nav {
   opacity: 1;
-  z-index: 11; }
+  z-index: 1; }
 
 /* header ******************************************
 ***************************************************/
@@ -604,11 +624,12 @@ ul {
   text-align: center; }
   @media (min-width: 600px) {
     .header {
-      height: 85px; } }
+      height: 85px;
+      border-bottom: 15px solid #fff; } }
   @media (min-width: 950px) {
     .header {
       padding: 15px;
-      height: 127px; } }
+      height: 144px; } }
   .header .logo img {
     height: 22px; }
   @media (min-width: 950px) {
@@ -798,5 +819,251 @@ ul {
   @media (min-width: 950px) {
     #mobile-cart {
       display: none; } }
+
+/* banner section of store page **********************
+******************************************************/
+.banner {
+  background: url(../img/banner/nest_cam-low-s.jpg) no-repeat 50% 50%;
+  background-size: cover;
+  background-origin: content-box;
+  height: 650px;
+  vertical-align: baseline; }
+  @media (min-width: 600px) {
+    .banner {
+      background: url(../img/banner/nest_cam_wide-s.jpg) no-repeat 50% 50%;
+      background-size: cover;
+      height: 525px; } }
+
+.banner-info {
+  display: block;
+  padding: 5px;
+  margin: 0;
+  text-align: center; }
+  @media (min-width: 600px) {
+    .banner-info {
+      width: 330px;
+      position: absolute;
+      left: 10px;
+      top: calc(50% - 105px); } }
+  @media (min-width: 750px) {
+    .banner-info {
+      left: 40px; } }
+  .banner-info a:hover a:after {
+    color: red; }
+  .banner-info h2 {
+    font-weight: 100;
+    font-size: 2em;
+    letter-spacing: -1px;
+    color: #353535;
+    padding: 0;
+    margin: 20px 0 5px; }
+    @media (min-width: 600px) {
+      .banner-info h2 {
+        font-size: 2.4em;
+        margin: 0 0 4px; } }
+  .banner-info h3 {
+    font-weight: 100;
+    line-height: 1.15em;
+    font-size: 1.13em;
+    color: #6b6b6b;
+    padding: 0;
+    margin: 0; }
+    @media (min-width: 600px) {
+      .banner-info h3 {
+        font-size: 1.25em; } }
+    @media (min-width: 950px) {
+      .banner-info h3 {
+        color: #353535;
+        font-size: 1.55em;
+        width: 90%;
+        margin: 0 auto 5px;
+        line-height: 1.3em; } }
+  .banner-info p {
+    font-weight: 100;
+    display: block;
+    width: 90%;
+    margin: 0 auto; }
+    .banner-info p:first-of-type {
+      border-bottom: 1px solid #d1d1d1; }
+
+.banner-sub-info1 {
+  font-size: 1.15em;
+  padding: 0 0 5px; }
+  @media (min-width: 600px) {
+    .banner-sub-info1 {
+      font-size: 1.2em;
+      padding: 0 0 7px; } }
+  .banner-sub-info1 span {
+    color: #00afd8;
+    padding: 0 8px; }
+    .banner-sub-info1 span:before {
+      content: "";
+      width: 1px;
+      margin-right: 12px;
+      height: 14px;
+      background: #d1d1d1;
+      display: inline-block; }
+      @media (min-width: 600px) {
+        .banner-sub-info1 span:before {
+          margin-right: 16px; } }
+  .banner-sub-info1 i {
+    background-image: url(../img/sprites-2.png);
+    background-position: 0 -1679px;
+    background-size: 461px auto;
+    height: 13px;
+    width: 13px;
+    margin-left: 4px;
+    display: inline-block;
+    vertical-align: middle; }
+    @media (min-width: 600px) {
+      .banner-sub-info1 i {
+        background-position: 0 -1710px;
+        height: 20px;
+        width: 20px;
+        margin-right: 5px; } }
+
+.banner-sub-info2 {
+  font-size: 1.1em;
+  padding: 5px 0 0; }
+  .banner-sub-info2 span {
+    font-size: 1.1em;
+    color: #f9a235;
+    border-radius: 3px;
+    border: 1px solid #f9a235;
+    padding: 0 5px; }
+    @media (min-width: 600px) {
+      .banner-sub-info2 span {
+        padding: 1px 5px; } }
+
+.banner-sub-link-2 {
+  color: #00afd8;
+  padding: 0 12px 0 5px;
+  position: relative;
+  transition: all 0.2s linear; }
+  .banner-sub-link-2:after {
+    content: "\003E";
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    font-size: 17px;
+    transition: right 0.2s linear; }
+
+.banner-sub-link-1 {
+  color: #00afd8;
+  padding: 0 13px 0 10px;
+  margin-right: 4px;
+  position: relative;
+  transition: all 0.2s linear; }
+  .banner-sub-link-1:after {
+    content: "\003E";
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 0px;
+    top: 2px;
+    font-size: 17px;
+    transition: right 0.2s linear; }
+
+.arrow:hover::after {
+  right: -3px; }
+
+.arrow:hover {
+  color: #6b6b6b; }
+
+.nestAware {
+  display: block;
+  padding: 5px;
+  margin: 0;
+  height: 230px;
+  background: url(../img/bg.jpeg) center center;
+  background-size: cover;
+  text-align: center; }
+  @media (min-width: 600px) {
+    .nestAware {
+      height: 160px;
+      text-align: left; } }
+
+.cloud-box {
+  display: inline-block;
+  background: url(../img/nestware.png) center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-width: 241px;
+  height: 81px;
+  margin: 10px;
+  padding: 0;
+  text-align: right; }
+  .cloud-box p {
+    color: #00afd8;
+    font-size: 40px;
+    letter-spacing: -1px;
+    margin: 13px 18px 0 0; }
+  .cloud-box a {
+    color: #00afd8;
+    display: inline-block; }
+
+.nestAware-wrap {
+  display: block;
+  width: 75%;
+  margin: 0 auto;
+  padding: 10px 0 0; }
+  @media (min-width: 600px) {
+    .nestAware-wrap {
+      padding: 20px 0 0;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-flex-direction: flex-start;
+          -ms-flex-direction: flex-start;
+              flex-direction: flex-start; } }
+  .nestAware-wrap a {
+    display: inline-block; }
+
+.nestAware-content {
+  margin: 0 10px;
+  padding: 0; }
+  @media (min-width: 600px) {
+    .nestAware-content {
+      margin: 0 20px; } }
+  .nestAware-content p {
+    color: #7b858e;
+    line-height: 20px;
+    margin: 5px 0; }
+  .nestAware-content p:first-of-type {
+    color: #00afd8;
+    margin: 0; }
+    @media (min-width: 950px) {
+      .nestAware-content p:first-of-type {
+        font-size: 22px;
+        line-height: 24px; } }
+    .nestAware-content p:first-of-type span {
+      display: block;
+      position: relative;
+      width: 90px;
+      margin: 0 auto;
+      font-size: 16px; }
+      @media (min-width: 600px) {
+        .nestAware-content p:first-of-type span {
+          display: inline-block;
+          width: 80px; } }
+      .nestAware-content p:first-of-type span:hover::after {
+        right: -3px; }
+      .nestAware-content p:first-of-type span:after {
+        content: "\003E";
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        font-size: 17px;
+        transition: right 0.2s linear; }
 
 /*# sourceMappingURL=main.css.map */

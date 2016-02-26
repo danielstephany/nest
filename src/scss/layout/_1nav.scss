@@ -7,12 +7,13 @@
 	position: fixed;
 	top: 0;
 	left: 0;
+	right: 0;
 	height: 100vh;
 	width: 85%;
 	margin: 0 15% 0 0;
 	opacity: 0;
 	z-index: -1;
-	overflow-x: scroll;
+	overflow-y: scroll;
 	transition: opacity .3s linear, z-index .0s linear;
 	@media (min-width: 600px) {
 		margin: 0 53% 0 0;
@@ -94,7 +95,7 @@
 
 .open .mobile-nav {
 	opacity: 1;
-	z-index: 11;
+	z-index: 1;
 }
 
 
