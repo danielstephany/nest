@@ -6,6 +6,10 @@
 	background: url(../img/bg.jpeg) center center;
 	background-size: cover;
 	text-align: center;
+	transition: all 0.1s linear;
+	&:hover {
+		box-shadow: 0 0 90px rgba(0,0,0,0.2) inset;
+	}
 	@media (min-width: 600px) {
 		height: 160px;
 		text-align: left;
@@ -61,6 +65,7 @@
 		color: #7b858e;
 		line-height: 20px;
 		margin: 5px 0;
+		
 	}
 	p:first-of-type {
 		color: $text-blue;
