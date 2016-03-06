@@ -558,12 +558,12 @@ ul {
     padding: 0; }
   .mobile-nav li {
     margin: 3px 0;
-    padding: 10px 20px; }
+    padding: 10px 26px; }
   .mobile-nav .logo {
     display: block;
     height: 28px;
     width: 65px;
-    margin: 20px; }
+    margin: 20px 26px; }
     .mobile-nav .logo img {
       height: 28px;
       width: 65px; }
@@ -572,7 +572,7 @@ ul {
     width: 100%;
     border-top: 1px solid #dbe3e5;
     border-bottom: 1px solid #dbe3e5;
-    padding: 15px 20px; }
+    padding: 15px 26px; }
     .mobile-nav .search span {
       font-weight: 100;
       font-size: 0.85em;
@@ -585,16 +585,16 @@ ul {
     color: #00afd8;
     font-weight: 100;
     margin: 25px 0;
-    padding: 0 20px; }
+    padding: 0 26px; }
   .mobile-nav p {
     color: #353535;
     margin: 40px 0 5px;
-    padding: 0 20px;
+    padding: 0 26px;
     font-weight: 100;
     font-size: 0.85em; }
   .mobile-nav .nav-button-container {
     width: 100%;
-    padding: 10px 0 15px;
+    padding: 10px 26px 15px;
     margin: 0;
     display: block;
     text-align: center; }
@@ -602,12 +602,15 @@ ul {
       border-radius: 5px;
       color: #fff;
       display: inline-block;
-      width: 90%;
+      width: 100%;
       height: 50px;
-      padding: 17px 0 15px;
-      font-weight: 400;
+      padding: 16px 0;
+      font-weight: bold;
       font-size: 1em;
-      background-color: #f9a235; }
+      background-color: #f9a235;
+      transition: all 0.1s linear; }
+      .mobile-nav .nav-button-container a:hover {
+        background-color: #fcd09f; }
 
 .open .mobile-nav {
   opacity: 1;
@@ -1371,7 +1374,10 @@ ul {
   .foot-nav-open .foot-nav .sub-nav-item {
     height: 36px; }
     .foot-nav-open .foot-nav .sub-nav-item a {
-      color: #fff; }
+      color: #fff;
+      transition: color 0.2s linear; }
+      .foot-nav-open .foot-nav .sub-nav-item a:hover {
+        color: #b7bec5; }
   .foot-nav-open .foot-nav .foot-nav-target h3 {
     color: #fff; }
   .foot-nav-open .foot-nav .foot-nav-target:after {

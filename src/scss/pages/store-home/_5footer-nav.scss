@@ -112,6 +112,10 @@
 			height: 36px;
 			a {
 				color: #fff;
+				transition: color 0.2s linear;
+				&:hover {
+					color: #b7bec5;
+				}
 			}	
 		}	
 		.foot-nav-target {
